@@ -98,11 +98,19 @@ body {
         letter-spacing: 1px;
         margin-bottom: 28px;
         margin-top: 3px;
+        &-top {
+            margin-top: 16px;
+        }
     }
+    
+
     &__title {
         font-size: 48px;
         font-weight: 700;
         letter-spacing: 1.7px;
+        &-top {
+            margin-top: -10px;
+        }
         span {
             display: block;
             color: $accent-color;
@@ -133,4 +141,29 @@ body {
         background-repeat: no-repeat;
         flex-basis: 500px;
     }
+}
+
+
+.block-author {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.block-ava {
+    position: relative;
+    &__svg {
+        position: absolute;
+        z-index: -1;
+        right: 0;
+    }
+    &__img {
+        margin-top: 48px;
+        margin-right: 44px;
+    }
+}
+
+
+.page {
+    padding-top: 161px;
 }
