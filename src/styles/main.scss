@@ -79,16 +79,16 @@ body {
     flex-basis: calc(93% - 500px);
     &__btn {
         display: block;
-        background-color: $accent-color;
-        color: $light-color;
+        background-color: #65e4a7;
+        color: #fff;
         text-decoration: none;
-        max-width: 250px;
+        max-width: 238px;
         border-radius: 3px;
         text-align: center;
         font-size: 18px;
         margin-top: 47px;
         letter-spacing: 0.7px;
-        padding: 14px 0;
+        padding: 14px 0px;
         margin-bottom: 20px;
     }
         
@@ -166,4 +166,25 @@ body {
 
 .page {
     padding-top: 161px;
+}
+
+
+
+.block-counter {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 161px;
+    p {
+        font-family: 'Open Sans', serif;
+        font-size: 18px;
+        text-align: center;
+        span {
+            font-family: 'Roboto Slab', serif;
+            font-size: 80px;
+            font-weight: 100;
+            display: block;
+            color: $accent-color;
+            margin-bottom: 13px;
+        }
+    }
 }
