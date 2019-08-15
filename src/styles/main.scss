@@ -22,6 +22,25 @@ h3 {
     font-size: 24px;
 }
 
+.page {
+    padding-top: 161px;
+    &_gray {
+        background-color: $bg-light-color;
+    }
+    &__title {
+        font-size: 48px;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+    &__subtitle {
+        color: $accent-color;
+        font-size: 18px;
+        display: block;
+        margin-top: 13px;
+        letter-spacing: 1px;
+    }
+}
+
 .page-main {
     background-image: url(../img/bg.png);
     background-repeat: no-repeat;
@@ -77,13 +96,12 @@ h3 {
 }
 
 .block-text {
+    flex-basis: calc(93% - 500px);
     small {
-        letter-spacing: 0px;
+        letter-spacing: 0.2px;
         font-size: 12px;
         font-weight: 100;
-        font-style: italic;
     }
-    flex-basis: calc(93% - 500px);
     &__btn {
         display: block;
         background-color: #65e4a7;
@@ -95,16 +113,16 @@ h3 {
         font-size: 18px;
         margin-top: 47px;
         letter-spacing: 0.7px;
-        padding: 14px 0px;
-        margin-bottom: 20px;
+        padding: 15px 6px;
+        margin-bottom: 19px;
     }
         
     &__name {
         font-family: 'Open Sans', serif;
         font-size: 18px;
         letter-spacing: 1px;
-        margin-bottom: 28px;
-        margin-top: 3px;
+        margin-bottom: 29px;
+        margin-top: 6px;
         &_top {
             margin-top: 16px;
         }
@@ -114,7 +132,7 @@ h3 {
     &__title {
         font-size: 48px;
         font-weight: 700;
-        letter-spacing: 1.7px;
+        letter-spacing: 1.9px;
         &-top {
             margin-top: -10px;
         }
@@ -123,9 +141,9 @@ h3 {
             color: $accent-color;
             font-size: 18px;
             font-weight: 100;
-            margin-top: 13px;
+            margin-top: 11px;
             margin-bottom: 39px;
-            letter-spacing: 0.9px;
+            letter-spacing: 1.17px;
         }
     }
     &__description {
@@ -133,7 +151,7 @@ h3 {
         font-size: 15px;
         line-height: 24px;
         margin-bottom: 24px;
-        letter-spacing: 0.7px;
+        letter-spacing: 0.74px;
     }
 }
 
@@ -147,6 +165,34 @@ h3 {
         background-image: url('../img/book.svg');
         background-repeat: no-repeat;
         flex-basis: 500px;
+        position: relative;
+        &__title {
+            font-family: 'Roboto Slab', serif;
+            text-transform: uppercase;
+            font-size: 36px;
+            position: absolute;
+            top: 114px;
+            left: calc(50% - 119px);
+            letter-spacing: 1.3px;
+            span {
+                font-family: 'Open Sans', serif;
+                display: block;
+                font-size: 14px;
+                color: $accent-color;
+                text-transform: initial;
+                margin-top: 4px;
+                letter-spacing: 0.7px;
+            }
+        }
+        &__author {
+            font-family: 'Open Sans', serif;
+            font-size: 14px;
+            color: $accent-color;
+            position: absolute;
+            bottom: 42px;
+            left: 87px;
+            letter-spacing: 0.6px;
+        }
     }
 }
 
@@ -190,30 +236,11 @@ h3 {
     }
 }
 
-.page {
-    padding-top: 161px;
-    &_gray {
-        background-color: $bg-light-color;
-    }
-    &__title {
-        font-size: 48px;
-        text-align: center;
-        letter-spacing: 2px;
-    }
-    &__subtitle {
-        color: $accent-color;
-        font-size: 18px;
-        display: block;
-        margin-top: 13px;
-        letter-spacing: 1px;
-    }
-}
-
-
 .block-about {
     display: flex;
     justify-content: space-between;
     margin-top: 84px;
+    padding-bottoM: 18px;
     p {
         font-family: "Open Sans", serif;
     }
@@ -244,6 +271,7 @@ h3 {
                 display: flex;
                 list-style-type: none;
                 margin-left: 17px;
+                font-size: 18px;
                 &__item {
                     margin-right: 10px;
                     &__link {
@@ -282,7 +310,7 @@ h3 {
                     position: absolute;
                     content: "+";
                     left: 0;
-                    background-color: $accent-color;
+                    background-color: #5fc9b7;
                     color: $light-color;
                     padding: 1px 6px;
                     font-family: "Open Sans", serif;
@@ -313,3 +341,81 @@ h3 {
     }
 }
 
+.other-books {
+    margin: 125px auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    &__container {
+        
+        &__book {
+            background-image: url('../img/book-mini.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 268px;
+            height: 409px;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            &-title {
+                font-family: "Roboto Slab", serif;
+                font-size: 24px;
+                font-weight: 800;
+                color: $bg-light-color;
+                position: absolute;
+                text-transform: uppercase;
+                top: 71px;
+                left: calc(50% - 70px);
+                letter-spacing: 1px;
+                margin-top: 40px;
+                span {
+                    font-family: "Open Sans", serif;
+                    font-size: 12px;
+                    display: block;
+                    color: $accent-color;
+                    font-weight: initial;
+                    position: absolute;
+                    text-transform: initial;
+                }
+            }
+            &-text {
+                font-family: "Open Sans", serif;
+                font-size: 12px;
+                color: $accent-color;
+                position: absolute;
+                bottom: 22px;
+                left: 72px;
+
+            }
+        }
+        &-title {
+            font-size: 24px;
+            margin-top: 40px;
+        }
+        &-text {
+            font-family: "Open Sans", serif;
+            font-size: 15px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        &-link {
+            color: $accent-color;
+            text-decoration: none;
+            font-family: "Open Sans", serif;
+            font-size: 15px;
+            font-weight: 800;
+        }
+    }
+    &-button {
+        color: white;
+        border: none;
+        background-color: #65e4a7;
+        text-align: center;
+        display: inline-block;
+        margin-left: calc(50% - 112px);
+        padding: 13px 38px;
+        border-radius: 5px;
+        font-family: "Roboto Slab", serif;
+        font-size: 18px;
+    }
+}
