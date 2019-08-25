@@ -251,6 +251,7 @@ h3 {
 
 
 .block-author {
+    padding-bottom: 59px;
     display: flex;
     justify-content: space-between;
     &__btn {
@@ -499,3 +500,53 @@ h3 {
         box-shadow: 0 -2px #b2f1be inset;
         }
     }
+
+.block-blog {
+    margin-top: 85px;
+    display: flex;
+    justify-content: space-between;
+    &__item {
+        &-img {
+            position: relative;
+            overflow: hidden;
+            width: 369px;
+            height: 224px;
+            img {
+                position: absolute;
+                width: 369px;
+                height: 224px;
+                object-fit: cover;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &-title {
+            font-size: 18px;
+            margin-top: 18px;
+            letter-spacing: 0.9px;
+        }
+
+        &-subtitle {
+            font-size: 15px;
+            font-family: "Roboto Slab",serif;
+            margin-top: 8px;
+            letter-spacing: 0.5px;
+            span {
+                color: $accent-color;
+            }
+        }
+
+        &-desc {
+            font-family: "Open Sans",serif;
+            font-size: 15px;
+            margin-top: 15px;
+            letter-spacing: 0.7px;
+            line-height: 24px;
+        }
+    }
+    &-btn {
+        margin-top: 70px;
+    }
+}
