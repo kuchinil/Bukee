@@ -27,6 +27,9 @@ h3 {
 .page {
     position: relative;
     padding-top: 161px;
+    @media(max-width: 998px) {
+        padding-top: 30px;
+    }
     &_gray {
         background-color: $bg-light-color;
     }
@@ -49,6 +52,14 @@ h3 {
         top: 0;
         width: 100%;
         z-index: -1;
+        @media(max-width:1060px) {
+            display: none;
+        }
+    }
+    &-carousel {
+        @media(max-width:1060px) {
+            background-color: $bg-dark-color;
+        }
     }
 
 }
@@ -64,6 +75,7 @@ h3 {
 .wrap {
     max-width: 1170px;
     margin: 0 auto;
+    padding: 0 30px;
 }
 
 .header {
@@ -74,6 +86,14 @@ h3 {
     margin: 0 auto;
     padding-top: 50px;
     padding-bottom: 180px;
+    @media(max-width:1200px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    @media(max-width:1100px) {
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
     &__logo {
         display: block;
         width: 137px;
@@ -85,6 +105,9 @@ h3 {
         display: flex;
         justify-content: flex-end;
         font-family: 'Open Sans', serif;
+        @media(max-width:1100px) {
+            margin-top: 27px;
+        }
         &__item {  
             margin-left: 20px;
         }
@@ -109,10 +132,25 @@ h3 {
 
 .block-text {
     flex-basis: calc(93% - 500px);
+    @media(max-width:1200px) {
+        flex-basis: calc(95% - 462px);
+    }
+    @media(max-width: 998px) {
+        flex-basis: calc(95% - 355px);
+    }
+
+    &_two {
+        text-align: center;
+    }
+
     &-item {
         margin-top: 46px;
         margin-left: 19px;
         margin-bottom: 63px;
+        @media(max-width: 998px) {
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
         &__date {
             font-family: "Open Sans",serif;
             font-weight: 400;
@@ -167,7 +205,9 @@ h3 {
         padding: 15px 6px;
         margin-bottom: 19px;
         box-shadow: 0 -2px #59bc88 inset;
-
+        @media(max-width: 850px) {
+            margin-top: 0px;
+        }
     }
         
     &__name {
@@ -176,8 +216,14 @@ h3 {
         letter-spacing: 1px;
         margin-bottom: 29px;
         margin-top: 6px;
+        @media(max-width: 890px) {
+            font-size: 12px;
+        }
         &_top {
             margin-top: 16px;
+            @media(max-width: 992px) {
+                margin-top: 0px;
+            }
         }
         &--two {
             margin-top: -3px;
@@ -190,12 +236,26 @@ h3 {
         font-size: 48px;
         font-weight: 700;
         letter-spacing: 1.9px;
+        @media(max-width: 998px) {
+            font-size: 35px;
+        }
+        @media(max-width: 890px) {
+            font-size: 30px;
+        }
         &-top {
             margin-top: -10px;
+            @media(max-width: 998px) {
+                margin-top: -30px;
+            }
         }
 
         &--two {
             margin-left: 19px;
+            span {
+                @media(max-width: 998px) {
+                    margin-bottom: -31px;
+                }
+            }
         }
 
         span {
@@ -206,6 +266,9 @@ h3 {
             margin-top: 11px;
             margin-bottom: 39px;
             letter-spacing: 1.17px;
+            @media(max-width: 998px) {
+                margin-bottom: 0px;
+            }
         }
     }
     &__description {
@@ -214,6 +277,9 @@ h3 {
         line-height: 24px;
         margin-bottom: 24px;
         letter-spacing: 0.74px;
+        @media(max-width: 890px) {
+            font-size: 14px;
+        }
     }
 }
 
@@ -228,6 +294,12 @@ h3 {
         background-repeat: no-repeat;
         flex-basis: 500px;
         position: relative;
+        @media(max-width: 998px) {
+            height: 550px;
+        }
+        @media(max-width: 768px) {
+            flex-basis: 400px;
+        }
         &__title {
             font-family: 'Roboto Slab', serif;
             text-transform: uppercase;
@@ -263,6 +335,15 @@ h3 {
     padding-bottom: 59px;
     display: flex;
     justify-content: space-between;
+    @media(max-width: 768px) {
+        flex-direction: column-reverse;
+    }
+    &_two {
+        @media(max-width: 870px) {
+            flex-direction: column;
+        }
+    }
+
     &__btn {
         position: relative;
         display: block;
@@ -278,19 +359,55 @@ h3 {
         padding: 15px 6px;
         margin-bottom: 19px;
         box-shadow: 0 -2px #b2f1be inset;
+        @media(max-width: 768px) {
+            margin: 0 auto;
+        }
     }
 }
 
 .block-ava {
     position: relative;
+    @media(max-width:1100px) {
+        margin-top: 46px;
+    }
+    @media(max-width: 998px) {
+        margin-top: 0px;
+    }
+    @media(max-width: 870px) {
+        margin-bottom: 30px;
+    }
+
+    @media(max-width: 768px) {
+        text-align: center;
+    }
+    
+    &_two {
+        @media(max-width: 870px) {
+            text-align: center;
+        }
+    }
+
     &__svg {
         position: absolute;
         z-index: -1;
         right: 0;
+        @media(max-width: 998px) {
+            width: 369px;
+            height: 419px;
+        }
+        @media(max-width: 870px) {
+            margin: 0 auto;
+        }
+        @media(max-width: 768px) {
+            right: 25%;
+        }
     }
     &__img {
         margin-top: 48px;
         margin-right: 44px;
+        @media(max-width: 998px) {
+            width: 338px;
+        }
     }
 }
 
@@ -298,10 +415,19 @@ h3 {
 .block-ava__img--two {
     margin-top: 47px;
     margin-left: 50px;
+    @media(max-width: 998px) {
+        margin-top: 8px;
+        margin-left: 19px;
+        height: 372px;
+    }
 }
 
 .block-ava__svg--two {
     left: 0;
+    @media(max-width: 998px) {
+        width: 338px;
+        height: 390px;
+    }
 }
 
 
@@ -310,6 +436,10 @@ h3 {
     justify-content: space-around;
     margin-top: 161px;
     padding-bottom: 126px;
+    @media(max-width: 998px) {
+        margin-top: -10px;
+        margin-bottom: -90px;
+    }
     p {
         font-family: 'Open Sans', serif;
         font-size: 18px;
@@ -329,6 +459,11 @@ h3 {
     display: flex;
     justify-content: space-between;
     margin-top: 84px;
+    position: relative;
+    @media(max-width:970px) {
+        flex-direction: column;
+        margin: 0 auto 0;
+    }
     p {
         font-family: "Open Sans", serif;
     }
@@ -341,6 +476,11 @@ h3 {
     &__text {
         flex-basis: 40%;
         line-height: 24px;
+        @media(max-width:970px) {
+            flex-direction: column;
+            margin: 50px auto 0;
+            text-align: center;
+        }
 
 
         &-description {
@@ -348,6 +488,9 @@ h3 {
         }
         
         &__features {
+            @media(max-width: 970px) {
+                margin-left: calc(50% - 94px);
+            }
             font-family: "Roboto Slab", serif;
             font-size: 18px;
             margin-top: -2px;
@@ -376,6 +519,12 @@ h3 {
 
     &__table {
         flex-basis: 50%;
+        @media(max-width:1200px) {
+            flex-basis: 60%;
+        }
+        @media(max-width:970px) {
+            margin: 20px auto 0;
+        }
         &__list {
             margin: 0;
             margin-top: 25px;
@@ -420,12 +569,18 @@ h3 {
             font-family: "Roboto Slab", serif;
             font-size: 18px;
             box-shadow: 0 -2px #b2f1be inset;
+            @media(max-width: 968px) {
+                margin: 20px 37%;
+            }
         }
 
         &-title {
             font-family: "Roboto Slab", serif;
             position: relative;
             left: 12px;
+            @media(max-width: 970px) {
+                left: 0px;
+            }
         }
     }
 }
@@ -435,8 +590,16 @@ h3 {
     display: flex;
     justify-content: space-between;
     text-align: center;
+    @media(max-width: 998px) {
+        margin: 12px auto;
+    }
+    @media(max-width: 890px) {
+        flex-direction: column;   
+    }
     &__container {
-        
+        @media(max-width: 890px) {
+            margin-bottom: 30px;   
+        }
         &__book {
             background-image: url('../img/book-mini.svg');
             background-repeat: no-repeat;
@@ -507,6 +670,9 @@ h3 {
         font-family: "Roboto Slab", serif;
         font-size: 18px;
         box-shadow: 0 -2px #b2f1be inset;
+        @media(max-width: 998px) {
+            margin: 50px auto;
+        }
         }
     }
 
@@ -514,15 +680,26 @@ h3 {
     margin-top: 85px;
     display: flex;
     justify-content: space-between;
+    @media(max-width:1060px) {
+        flex-direction: column;
+    }
+    @media(max-width: 998px) {
+        margin: 12px auto;
+    }
     &__item {
+        margin-right: 10px;
+        @media(max-width:1060px) {
+            width: 50%;
+            margin: 0 auto 30px;
+        }
         &-img {
             position: relative;
             overflow: hidden;
-            width: 369px;
+            width: 100%;
             height: 224px;
             img {
                 position: absolute;
-                width: 369px;
+                width: 100%;
                 height: 224px;
                 object-fit: cover;
                 left: 50%;
@@ -628,6 +805,12 @@ h3 {
 
 footer {
     background-color: $bg-dark-color;
+    @media(max-width: 1200px) {
+        padding: 150px 40px;
+    }
+    @media(max-width: 998px) {
+        padding: 0;
+    }
 }
 
 .footer {
@@ -636,8 +819,7 @@ footer {
     max-width: 1170px;
     margin: 0 auto;
     color: $gray-color;
-    padding: 150px 0px;
-
+    padding: 150px 10px;
 
     &__block {
         flex-basis: 22%;
@@ -703,7 +885,9 @@ footer {
 .block-slider {
     padding-bottom: 300px;
     text-align: center;
-    
+    @media(max-width: 998px) {
+        padding-bottom: 30px;
+    }
     &-title {
         color: $accent-color;
         font-family: "Roboto Slab", serif;
@@ -771,6 +955,12 @@ footer {
     
 }
 
+
+.slick-slide {
+    &:focus {
+        outline: none;
+    }
+}
 
 .slick-dots {
     display: flex;
